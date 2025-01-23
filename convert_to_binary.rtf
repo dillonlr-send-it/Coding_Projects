@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red18\green0\blue252;\red255\green255\blue255;\red0\green0\blue0;
+\red144\green1\blue17;\red21\green107\blue41;}
+{\*\expandedcolortbl;;\cssrgb\c10381\c10452\c99327;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c63897\c8167\c8087;\cssrgb\c7364\c48551\c21056;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 import\cf0 \strokec4  math\
+\cf2 \strokec2 import\cf0 \strokec4  os\
+\cf2 \strokec2 import\cf0 \strokec4  random\
+\cf2 \strokec2 import\cf0 \strokec4  re\
+\cf2 \strokec2 import\cf0 \strokec4  sys\
+\
+\
+\
+\cf2 \strokec2 if\cf0 \strokec4  \cf2 \strokec2 __name__\cf0 \strokec4  == \cf5 \strokec5 '__main__'\cf0 \strokec4 :\
+    \cf6 \strokec6 # put input into correct format\cf0 \strokec4 \
+    n = \cf2 \strokec2 int\cf0 \strokec4 (\cf2 \strokec2 input\cf0 \strokec4 ().strip())\
+    store = []\
+    \
+    \cf6 \strokec6 # Determine if there are reminders and continue until binary # is satisfied\cf0 \strokec4 \
+    \cf2 \strokec2 while\cf0 \strokec4  n > \cf6 \strokec6 0\cf0 \strokec4 :\
+        \cf2 \strokec2 if\cf0 \strokec4  n % \cf6 \strokec6 2\cf0 \strokec4  == \cf6 \strokec6 0\cf0 \strokec4 :\
+            store.append(\cf6 \strokec6 0\cf0 \strokec4 )\
+        \cf2 \strokec2 else\cf0 \strokec4 :\
+            store.append(\cf6 \strokec6 1\cf0 \strokec4 )\
+        n = math.floor(n/\cf6 \strokec6 2\cf0 \strokec4 )\
+        \
+    \cf6 \strokec6 # convert number to binary\cf0 \strokec4 \
+    d = \cf6 \strokec6 0\cf0 \strokec4 \
+    count_size = []\
+    \cf2 \strokec2 for\cf0 \strokec4  i \cf2 \strokec2 in\cf0 \strokec4  store:\
+        \cf2 \strokec2 if\cf0 \strokec4  i == \cf6 \strokec6 0\cf0 \strokec4 :\
+            d = \cf6 \strokec6 0\cf0 \strokec4 \
+        \cf2 \strokec2 else\cf0 \strokec4 :\
+            d = d+\cf6 \strokec6 1\cf0 \strokec4 \
+        count_size.append(d)\
+    \cf2 \strokec2 print\cf0 \strokec4 (\cf2 \strokec2 max\cf0 \strokec4 (count_size))\
+    \cb1 \strokec4 \
+\
+}
